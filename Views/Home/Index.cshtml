@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+    .background-text {
+        position: relative;
+        overflow: hidden;
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+        color: white; /* Ensure text is readable */
+        text-align: center; /* Center text within the div */
+        padding: 20px;
+    }
+
+    .background-text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url('@Url.Content("~/Content/images/news-image.jpg")');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        opacity: 0.5; /* Adjust the opacity to ensure text readability */
+    }
+
+    .content {
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners for aesthetics */
+        width: 80%; /* Adjust width as needed */
+        max-width: 800px; /* Limit the max width */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        color: white;
+        background-color: #007bff; /* Button color */
+        text-decoration: none;
+        border-radius: 5px; /* Rounded corners for the button */
+    }
+
+    .testimonial {
+        margin-top: 20px;
+    }
+
+    .testimonial p:first-child {
+        font-style: italic;
+    }
+</style>
+
+<div class="background-text">
+    <div class="content">
+        <h1>Welcome to MedEase Campus Clinic</h1>
+        <p>Your Trusted Healthcare Provider, here at DUT</p>
+
+        <div>
+            <h3>Specialty Care</h3>
+            <p>Specialized medical care for specific health conditions and diseases.</p>
+        </div>
+
+        <div>
+            <h2>Featured Services</h2>
+            <h3>Primary Care</h3>
+            <p>Comprehensive primary care services for individuals and families.</p>
+        </div>
+
+        <div>
+            <h2>Book an Appointment</h2>
+            <p>Get started on your path to better health. Schedule an appointment today!</p>
+       
+        </div>
+
+        <h2>What Our Patients Say</h2>
+
+        <div class="testimonial">
+            <p>"I received great service from MedEase Campus Clinic."</p>
+            <p>- Anelisa</p>
+        </div>
+
+        <div class="testimonial">
+            <p>"MedEase gives the best quality service for us patients."</p>
+            <p>- Mbuso</p>
+        </div>
+    </div>
+</div>
+<!-- Testimonials Section -->
+<!-- Contact Information Section -->
+<!-- Social Media Links -->
